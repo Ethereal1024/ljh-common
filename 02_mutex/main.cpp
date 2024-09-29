@@ -1,6 +1,6 @@
 #include "reaction.hpp"
 
-int main(){
+int main() {
     Reaction my_reaction;
     my_reaction.start();
     return 0;

@@ -1,12 +1,10 @@
 #include "reaction.hpp"
 
-Reaction::Reaction() : 
-reacting(false), n_carbon(0), n_hydrogen(0)
-{}
+Reaction::Reaction() : reacting(false), n_carbon(0), n_hydrogen(0) {}
 
-void Reaction::releaseCarbon(){
-    while(1){
-        if(n_carbon){
+void Reaction::releaseCarbon() {
+    while (1) {
+        if (n_carbon) {
             {
                 mtx.lock();
                 candidate.push_back('C');
@@ -18,9 +16,9 @@ void Reaction::releaseCarbon(){
     }
 }
 
-void Reaction::releaseHydrogen(){
-    while(1){
-        if(n_hydrogen >= 4){
+void Reaction::releaseHydrogen() {
+    while (1) {
+        if (n_hydrogen >= 4) {
             {
                 mtx.lock();
                 candidate += "HHHH";
@@ -32,8 +30,8 @@ void Reaction::releaseHydrogen(){
     }
 }
 
-void Reaction::compose(){
-    while(n_carbon && n_hydrogen >= 4 || reacting){
+void Reaction::compose() {
+    while (n_carbon && n_hydrogen >= 4 || reacting) {
         std::thread trdC(&Reaction::releaseCarbon, this);
         std::thread trdH(&Reaction::releaseHydrogen, this);
         trdC.join();
@@ -43,13 +41,15 @@ void Reaction::compose(){
     }
 }
 
-void Reaction::start(){
-    std::cin >> elements; 
+void Reaction::start() {
+    std::cin >> elements;
     reacting = true;
     std::thread cps(&Reaction::compose, this);
-    for(auto c : elements){
-        if(c == 'C') n_carbon++;
-        if(c == 'H') n_hydrogen++;
+    for (auto c : elements) {
+        if (c == 'C')
+            n_carbon++;
+        if (c == 'H')
+            n_hydrogen++;
     }
     reacting = false;
     cps.join();
