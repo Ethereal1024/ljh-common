@@ -33,7 +33,7 @@ void Reaction::releaseHydrogen(){
 }
 
 void Reaction::compose(){
-    while(n_carbon && n_hydrogen >= 4 || !reacting){
+    while(n_carbon && n_hydrogen >= 4 || reacting){
         std::thread trdC(&Reaction::releaseCarbon, this);
         std::thread trdH(&Reaction::releaseHydrogen, this);
         trdC.join();
@@ -45,12 +45,13 @@ void Reaction::compose(){
 
 void Reaction::start(){
     std::cin >> elements; 
+    reacting = true;
     std::thread cps(&Reaction::compose, this);
     for(auto c : elements){
         if(c == 'C') n_carbon++;
         if(c == 'H') n_hydrogen++;
     }
-    reacting = true;
+    reacting = false;
     cps.join();
     std::cout << "\n";
 }
