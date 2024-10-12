@@ -1,3 +1,0 @@
-E:/Workplace/learn_opencv/CubeColorDetector/build/CMakeFiles/cube_color_detect.dir
-E:/Workplace/learn_opencv/CubeColorDetector/build/CMakeFiles/edit_cache.dir
-E:/Workplace/learn_opencv/CubeColorDetector/build/CMakeFiles/rebuild_cache.dir
