@@ -40,7 +40,7 @@ private:
 
         this->get_parameter("ekf.xyz", ekf_xyz_);
         this->get_parameter("ekf.yaw", ekf_yaw_);
-        this->get_parameter("eke.r", ekf_r_);
+        this->get_parameter("ekf.r", ekf_r_);
         this->get_parameter("vx", vx_);
         this->get_parameter("vy", vy_);
         this->get_parameter("vz", vz_);
