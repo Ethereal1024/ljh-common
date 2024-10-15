@@ -6,8 +6,8 @@
 std::string path = "image.png";
 
 void cubeEnhance(const cv::Mat& inputImg, cv::Mat& outputImg, const float weight) {
-    if (weight < -1.5 || weight > 4) {
-        throw std::invalid_argument("Weight must be between -1.5 and 4.");
+    if (weight < -1.5 || weight > 1.5) {
+        throw std::invalid_argument("Weight must be between -1.5 and 1.5.");
     }
 
     if (inputImg.empty()) {
