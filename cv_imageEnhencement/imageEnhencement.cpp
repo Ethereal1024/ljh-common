@@ -35,7 +35,7 @@ int main() {
         cv::Mat img = cv::imread(path);
         cv::Mat result;
 
-        cubeEnhance(img, result, 50);
+        cubeEnhance(img, result, 1);
 
         cv::cvtColor(img, img, cv::COLOR_BGR2GRAY);
 
