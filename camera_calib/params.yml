@@ -1,0 +1,6 @@
+marker:
+  ros__parameters:
+    sideLen: 20
+    patternSize:
+      x: 12
+      y: 8
