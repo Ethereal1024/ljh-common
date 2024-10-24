@@ -1,0 +1,20 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from reference_msgs/msg/Reference.msg
+// generated code does not contain a copyright notice
+
+#include "reference_msgs/msg/Pixel.idl"
+#include "reference_msgs/msg/WorldCoordinate.idl"
+
+module reference_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "msg/Reference.msg")
+    struct Reference {
+      reference_msgs::msg::Pixel vec_u;
+
+      reference_msgs::msg::WorldCoordinate vec_x;
+
+      boolean delivering;
+    };
+  };
+};

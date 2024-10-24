@@ -1,0 +1,6 @@
+msg/Pixel.idl
+msg/Pixel.msg
+msg/Reference.idl
+msg/Reference.msg
+msg/WorldCoordinate.idl
+msg/WorldCoordinate.msg

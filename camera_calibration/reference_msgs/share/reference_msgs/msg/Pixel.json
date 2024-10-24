@@ -1,0 +1,36 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "reference_msgs/msg/Pixel",
+      "fields": [
+        {
+          "name": "u",
+          "type": {
+            "type_id": 10,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "v",
+          "type": {
+            "type_id": 10,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "reference_msgs/msg/Pixel",
+      "hash_string": "RIHS01_9a213a8aa3b2bc93dd2c7d8399643fe6cff42e72308bcd112f147a6c3fd7d3ee"
+    }
+  ]
+}
