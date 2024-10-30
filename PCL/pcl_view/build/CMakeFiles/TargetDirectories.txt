@@ -1,0 +1,3 @@
+/home/ethereal/pcl/pcl_view/build/CMakeFiles/pcl_viewer.dir
+/home/ethereal/pcl/pcl_view/build/CMakeFiles/edit_cache.dir
+/home/ethereal/pcl/pcl_view/build/CMakeFiles/rebuild_cache.dir
